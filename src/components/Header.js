@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom'
 
 const Header = ({active, setActive, user, handleLogout}) => {
   const userId = user?.uid;
-  console.log("user Id", userId);
-  console.log("name", user?.displayName);
-  // 1:07:06
+  // console.log("user Id", userId);
+  // console.log("name", user?.displayName);
   return (
     <div>
-      {/* <h2>Header</h2> */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid bg-faded padding-media">
           <div className="container padding-media">
@@ -29,7 +27,7 @@ const Header = ({active, setActive, user, handleLogout}) => {
                   <Link to="/" style={{textDecoration: "none"}}>
                     <li className={`nav-item nav-link ${active === "home" ? "active" : ""}`} onClick={() => setActive("home")}>Home</li>
                   </Link>
-                  <Link to="/create">
+                  <Link to="/created">
                     <li className={`nav-item nav-link ${active === "create" ? "active" : ""}`} onClick={() => setActive("create")}>Create</li>
                   </Link>
                   <Link to="/about">
