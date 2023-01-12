@@ -46,7 +46,7 @@ function App() {
      <ToastContainer position='top-center'></ToastContainer>
      <Routes>
       <Route path='/' element={<Home></Home>}></Route>
-      <Route path='/details/:id' element={<Details></Details>}></Route>
+      <Route path='/details/:id' element={<Details setActive={setActive}></Details>}></Route>
       <Route path='/created' element={user?.uid ? <AddEditBlog user={user}></AddEditBlog> : <Navigate to="/"></Navigate>}></Route>
       <Route path='/update/:id' element={user?.uid ? <AddEditBlog user={user}></AddEditBlog> : <Navigate to="/"></Navigate>}></Route>
       <Route path='/about' element={<About></About>}></Route>
