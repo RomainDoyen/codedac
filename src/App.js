@@ -45,10 +45,10 @@ function App() {
      <Header setActive={setActive} active={active} user={user} handleLogout={handleLogout}></Header>
      <ToastContainer position='top-center'></ToastContainer>
      <Routes>
-      <Route path='/' element={<Home></Home>}></Route>
+      <Route path='/' element={<Home setActive={setActive} user={user}></Home>}></Route>
       <Route path='/details/:id' element={<Details setActive={setActive}></Details>}></Route>
       <Route path='/created' element={user?.uid ? <AddEditBlog user={user}></AddEditBlog> : <Navigate to="/"></Navigate>}></Route>
-      <Route path='/update/:id' element={user?.uid ? <AddEditBlog user={user}></AddEditBlog> : <Navigate to="/"></Navigate>}></Route>
+      <Route path='/update/:id' element={user?.uid ? <AddEditBlog user={user} setActive={setActive}></AddEditBlog> : <Navigate to="/"></Navigate>}></Route>
       <Route path='/about' element={<About></About>}></Route>
       <Route path='/auth' element={<Auth setActive={setActive}></Auth>}></Route>
       <Route path='*' element={<NotFound></NotFound>}></Route>

@@ -3,8 +3,9 @@ import ReactTagInput from '@pathofdev/react-tag-input'
 import '@pathofdev/react-tag-input/build/index.css'
 import { db, storage } from '../firebase'
 import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage'
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-import { useNavigate } from 'react-router-dom'
+import { addDoc, collection, doc, getDoc, serverTimestamp, updateDoc } from 'firebase/firestore'
+import { useNavigate, useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const initialState = {
   title: "",
@@ -23,11 +24,13 @@ const categoryOption = [
   "Java"
 ]
 
-const AddEditBlog = ({user}) => {
+const AddEditBlog = ({user, setActive}) => {
   const [form, setForm] = useState(initialState);
   const [file, setFile] = useState(null);
   const {title, tags, trending, category, description} = form;
   const [progress, setProgress] = useState(null);
+
+  const {id} = useParams();
 
   const navigate = useNavigate();
 
@@ -53,6 +56,7 @@ const AddEditBlog = ({user}) => {
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadUrl) => {
+          toast.info("Téléchargement d'image vers firebase avec succès");
           setForm((prev) => ({...prev, imgUrl: downloadUrl}));
         });
       }
@@ -60,6 +64,19 @@ const AddEditBlog = ({user}) => {
     };
     file && uploadFile();
   }, [file]);
+
+  useEffect(() => {
+    id && getBlogDetail();
+  }, [id]);
+
+  const getBlogDetail = async () => {
+    const docRef = doc(db, "blogs", id);
+    const snapshot = await getDoc(docRef);
+    if (snapshot.exists()) {
+      setForm({...snapshot.data()});
+    }
+    setActive(null);
+  }
 
   const handleChange = (e) => {
     setForm({...form, [e.target.name]: e.target.value});
@@ -79,17 +96,34 @@ const AddEditBlog = ({user}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (category && tags && title && file && description && trending) {
-      try {
-        await addDoc(collection(db, "blogs"), {
-          ...form,
-          timestamp: serverTimestamp(),
-          author: user.displayName,
-          userId: user.uid
-        });
-      } catch (error) {
-        console.log(error);
+    if (category && tags && title && description && trending) {
+      if (!id) {
+        try {
+          await addDoc(collection(db, "blogs"), {
+            ...form,
+            timestamp: serverTimestamp(),
+            author: user.displayName,
+            userId: user.uid
+          });
+          toast.success("Le blog a été créé avec succès");
+        } catch (error) {
+          console.log(error);
+        }
+      } else {
+        try {
+          await updateDoc(doc(db, "blogs", id), {
+            ...form,
+            timestamp: serverTimestamp(),
+            author: user.displayName,
+            userId: user.uid
+          });
+          toast.success("Le blog a été mis à jour avec succès");
+        } catch (error) {
+          console.log(error);
+        }
       }
+    } else {
+      return toast.error("Tous les champs sont obligatoires");
     }
 
     navigate("/");
@@ -100,7 +134,7 @@ const AddEditBlog = ({user}) => {
       <div className="container">
         <div className="col-12">
           <div className="text-center heading-py-2">
-            Create Blog
+            {id ? "Mettre à jour le blog" : "Création d'un blog"}
           </div>
         </div>
         <div className="row h-100 justify-content-center align-items-center">
@@ -136,7 +170,9 @@ const AddEditBlog = ({user}) => {
                 <input type="file" className="form-control" onChange={(e) => setFile(e.target.files[0])}/>
               </div>
               <div className="col-12 py-3 text-center">
-                  <button className="btn btn-add" type='submit' disabled={progress !== null && progress < 100}>Envoyer</button>
+                  <button className="btn btn-add" type='submit' disabled={progress !== null && progress < 100}>
+                    {id ? "Mettre à jour" : "Envoyer"}
+                  </button>
               </div>
             </form>
           </div>
