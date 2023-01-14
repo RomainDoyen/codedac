@@ -50,7 +50,7 @@ function App() {
       <Route path='/created' element={user?.uid ? <AddEditBlog user={user}></AddEditBlog> : <Navigate to="/"></Navigate>}></Route>
       <Route path='/update/:id' element={user?.uid ? <AddEditBlog user={user} setActive={setActive}></AddEditBlog> : <Navigate to="/"></Navigate>}></Route>
       <Route path='/about' element={<About></About>}></Route>
-      <Route path='/auth' element={<Auth setActive={setActive}></Auth>}></Route>
+      <Route path='/auth' element={<Auth setActive={setActive} setUser={setUser}></Auth>}></Route>
       <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
     </div>

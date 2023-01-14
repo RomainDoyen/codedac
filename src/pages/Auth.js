@@ -12,7 +12,7 @@ const initialState = {
   confirmPassword: ""
 }
 
-const Auth = ({setActive}) => {
+const Auth = ({setActive, setUser}) => {
   const [state, setState] = useState(initialState);
   const [signUp, setSignUP] = useState(false);
   const {email, password, firstName, lastName, confirmPassword} = state;
@@ -27,6 +27,7 @@ const Auth = ({setActive}) => {
     if(!signUp) {
       if (email && password) {
         const {user} = await signInWithEmailAndPassword(auth, email, password);
+        setUser(user);
         setActive("home");
       } else {
         return toast.error("All fields are mandatory to fill");

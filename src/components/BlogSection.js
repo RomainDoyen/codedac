@@ -34,7 +34,7 @@ const BlogSection = ({blogs, user, handleDelete}) => {
                 <Link to={`/details/${item.id}`}>
                     <button className="btn btn-read">Lire la suite</button>
                 </Link>
-                {user?.uid && item.userId === user.uid && (
+                {userId && item.userId === userId && (
                     <div style={{float: "right"}}>
                         <FontAwesome name='trash' style={{margin: "15px", cursor: "pointer"}} size="2x" onClick={() => handleDelete(item.id)}></FontAwesome>
                         <Link to={`/update/${item.id}`}>

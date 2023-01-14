@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 
 const Header = ({active, setActive, user, handleLogout}) => {
   const userId = user?.uid;
-  // console.log("user Id", userId);
-  // console.log("name", user?.displayName);
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -18,12 +16,12 @@ const Header = ({active, setActive, user, handleLogout}) => {
               data-bs-parent="#navbarSupportedContent"
               aria-controls='navbarSupportedContent'
               aria-expanded="true"
-              aria-aria-label='Toggle Navigation'
+              aria-label='Toggle Navigation'
               >
                 <span className="fa fa-bars"></span>
               </button>
-              <div className="collapse navbar-collapse">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0" id="navbarSupportedContent">
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <Link to="/" style={{textDecoration: "none"}}>
                     <li className={`nav-item nav-link ${active === "home" ? "active" : ""}`} onClick={() => setActive("home")}>Home</li>
                   </Link>
