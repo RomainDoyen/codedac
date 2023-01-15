@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 const Header = ({active, setActive, user, handleLogout}) => {
   const userId = user?.uid;
   return (
-    <div>
+    <div className='main-header'>
+      <h1 id='h1'>⌨️ Blog CodeDAC</h1>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid bg-faded padding-media">
           <div className="container padding-media">
             <nav className="navbar navbar-toggleable-md navbar-light">
-              <button 
+              {/* <button 
               type='button' 
               data-bs-toggle="collapse" 
               data-bs-target="#navbarSupportedContent"
@@ -19,7 +20,7 @@ const Header = ({active, setActive, user, handleLogout}) => {
               aria-label='Toggle Navigation'
               >
                 <span className="fa fa-bars"></span>
-              </button>
+              </button> */}
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <Link to="/" style={{textDecoration: "none"}}>
