@@ -14,7 +14,6 @@ import Header from './components/Header';
 import Auth from './pages/Auth';
 import { auth } from './firebase';
 import { signOut } from 'firebase/auth';
-import Footer from './pages/Footer';
 
 function App() {
   const [active, setActive] = useState("home");
@@ -41,6 +40,8 @@ function App() {
 
   return (
     <div className="App">
+     <h1>Blog CodeDAC</h1>
+     {/* <Home></Home> */}
      <Header setActive={setActive} active={active} user={user} handleLogout={handleLogout}></Header>
      <ToastContainer position='top-center'></ToastContainer>
      <Routes>
@@ -52,7 +53,6 @@ function App() {
       <Route path='/auth' element={<Auth setActive={setActive} setUser={setUser}></Auth>}></Route>
       <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
-     <Footer></Footer>
     </div>
   );
 }
