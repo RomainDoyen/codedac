@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main, .flex-content, .content-code {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* height: 40vh; */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.content, pre {
+  width: 700px;
+  padding: 20px;
+  color: rgb(176, 176, 176);
+  border-radius: 20px;
+  background-color: rgb(240, 244, 247);
+  background-image: linear-gradient(-70deg,  #151515, #1e1d1d);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.lien {
+  cursor: pointer;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
   }
-  to {
-    transform: rotate(360deg);
+  15% {
+    transform: rotateZ(-15deg);
   }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+.account {
+  position: absolute;
+  right: 15px;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #12b688;
+  font-size: medium;
+  border: none;
+  border-radius: 0.5rem;
+  transition: 1s;
+  cursor: pointer;
+  animation: wiggle 2s linear infinite;
+}
+
+.account:hover {
+  background-color: #41B993;
+  color: #59756d;
+}
+
+.glass-1 {
+  height: 280px;
+  width: 420px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(35px);
+  border: 2px solid #6b5590;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+  padding: 30px 30px 30px 30px;
+  overflow: hidden;
+  transition: 1s all;
+}
+
+.glass-1 h2 {
+  color: #9C7BD7;
+  margin-bottom: 15px;
+}
+
+.glass-1 p {
+  color: rgb(190, 190, 190);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5em;
+}
+
+.glass-1:hover {
+  background-color: #6b5590;
+}
+
+.glass-2 {
+  width: 400px;
+  min-height: 250px;
+  margin-left: 4em;
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 #202020;
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border: 2px solid #59756d;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  z-index: 10;
+  color: whitesmoke;
+  transition: 1s all;
+}
+
+.glass-2 h2 {
+  color: #41B993;
+  margin-bottom: 15px;
+}
+
+.glass-2 p {
+  color: rgb(190, 190, 190);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5em;
+}
+
+.glass-2:hover {
+  background-color: #59756d;
+}
+
+span {
+  color: #9C7BD7;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+.green {
+  color: #41B993;
 }
