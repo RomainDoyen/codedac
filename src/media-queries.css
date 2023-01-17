@@ -1,4 +1,4 @@
-@media(min-width:320px) and (max-width:480px) {
+/* @media(min-width:320px) and (max-width:480px) {
     .navbar-light .navbar-nav .open > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.active {
         -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)!important;
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%)!important;
@@ -55,4 +55,4 @@
         flex-direction: column !important;
         margin-top: 15px;  
        }
- }
+ } */

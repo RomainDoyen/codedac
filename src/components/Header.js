@@ -24,33 +24,33 @@ const Header = ({active, setActive, user, handleLogout}) => {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <Link to="/" style={{textDecoration: "none"}}>
-                    <li className={`nav-item nav-link ${active === "home" ? "active" : ""}`} onClick={() => setActive("home")}>Home</li>
+                    <li className={`nav-item nav-link ${active === "home" ? "active" : ""}`} onClick={() => setActive("home")}>Accueil</li>
                   </Link>
                   <Link to="/created">
-                    <li className={`nav-item nav-link ${active === "create" ? "active" : ""}`} onClick={() => setActive("create")}>Create</li>
+                    <li className={`nav-item nav-link ${active === "create" ? "active" : ""}`} onClick={() => setActive("create")}>Créer</li>
                   </Link>
                   <Link to="/about">
-                    <li className={`nav-item nav-link ${active === "about" ? "active" : ""}`} onClick={() => setActive("about")}>About</li>
+                    <li className={`nav-item nav-link ${active === "about" ? "active" : ""}`} onClick={() => setActive("about")}>À propos</li>
                   </Link>
                 </ul>
                 <div className="row g-3">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  {userId ? (
-                    <>
-                      <div className="profile-logo">
-                        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="logo" style={{width: "30px", height: "30px", borderRadius: "50%", marginTop: "12px"}}/>
-                      </div>
-                      <p style={{marginTop: "12px", marginLeft: "5px"}}>
-                        {user?.displayName}
-                      </p>
-                      <li className="nav-item nav-link" onClick={handleLogout}>Logout</li>
-                    </>
-                  ) : (
-                    <Link to="/auth">
-                      <li className={`nav-item nav-link ${active === "login" ? "active" : ""}`} onClick={() => setActive("login")}>Login</li>
-                    </Link>
-                  )}
-                </ul>
+                  <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    {userId ? (
+                      <>
+                        <div className="profile-logo">
+                          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="logo" style={{width: "30px", height: "30px", borderRadius: "50%", marginTop: "12px"}}/>
+                        </div>
+                        <p style={{marginTop: "12px", marginLeft: "5px"}}>
+                          {user?.displayName}
+                        </p>
+                        <li className="account nav-link" onClick={handleLogout}>Déconnexion</li>
+                      </>
+                    ) : (
+                      <Link to="/auth">
+                        <li className={`account nav-link ${active === "login" ? "active" : ""}`} onClick={() => setActive("login")}>Connexion</li>
+                      </Link>
+                    )}
+                  </ul>
                 </div>
               </div>
             </nav>

@@ -48,13 +48,12 @@ const Auth = ({setActive, setUser}) => {
   }
 
   return (
-    <div>
-      <h2>Auth</h2>
+    <div className='flex-content'>
       <div className="container-fluid mb-4">
         <div className="container">
           <div className="col-12 text-center">
             <div className="text-center heading py-2">
-              {!signUp ? "Sign-In" : "Sign-Up"}
+              {!signUp ? "S'identifier" : "S'inscrire"}
             </div>
           </div>
           <div className="row h-100 justify-content-center align-items-center">
@@ -63,10 +62,10 @@ const Auth = ({setActive, setUser}) => {
                 {signUp && (
                   <>
                     <div className="col-6 py-3">
-                      <input type="text" className='form-control input-text-box' placeholder='First name' name='firstName' value={firstName} onChange={handleChange} />
+                      <input type="text" className='form-control input-text-box' placeholder='Prénom' name='firstName' value={firstName} onChange={handleChange} />
                     </div>
                     <div className="col-6 py-3">
-                      <input type="text" className='form-control input-text-box' placeholder='Last name' name='lastName' value={lastName} onChange={handleChange} />
+                      <input type="text" className='form-control input-text-box' placeholder='Nom' name='lastName' value={lastName} onChange={handleChange} />
                     </div>
                   </>
                 )}
@@ -74,16 +73,16 @@ const Auth = ({setActive, setUser}) => {
                   <input type="email" className='form-control input-text-box' placeholder='Email' name='email' value={email} onChange={handleChange} />
                 </div>
                 <div className="col-12 py-3">
-                  <input type="password" className='form-control input-text-box' placeholder='Password' name='password' value={password} onChange={handleChange} />
+                  <input type="password" className='form-control input-text-box' placeholder='Mot de passe' name='password' value={password} onChange={handleChange} />
                 </div>
                 {signUp && (
                   <div className="col-12 py-3">
-                    <input type="password" className='form-control input-text-box' placeholder='Confirm Password' name='confirmPassword' value={confirmPassword} onChange={handleChange} />
+                    <input type="password" className='form-control input-text-box' placeholder='Confirmer le mot de passe' name='confirmPassword' value={confirmPassword} onChange={handleChange} />
                   </div>
                 )}
                 <div className="col-12 py-3 text-center">
                   <button className={`btn ${!signUp ? "btn-sign-in" : "btn-sign-up"}`} type="submit" >
-                    {!signUp ? "Sign-in" : "Sign-up"}
+                    {!signUp ? "S'identifier" : "S'inscrire"}
                   </button>
                 </div>
               </form>
@@ -92,9 +91,9 @@ const Auth = ({setActive, setUser}) => {
                   <>
                     <div className="text-center justify-content-center mt-2 pt-2">
                       <p className="small fw-bold mt-2 pt-1 mb-0">
-                        Don't have an account ?&nbsp;
+                        Vous n'avez pas de compte ?&nbsp;
                         <span className="link-danger" style={{textDecoration: "none", cursor: "pointer"}} onClick={() => setSignUP(true)}>
-                          Sign up
+                          S'inscrire
                         </span>
                       </p>
                     </div>
@@ -103,9 +102,9 @@ const Auth = ({setActive, setUser}) => {
                   <>
                     <div className="text-center justify-content-center mt-2 pt-2">
                       <p className="small fw-bold mt-2 pt-1 mb-0">
-                        Already have an account ?&nbsp;
+                        Vous avez déjà un compte ?&nbsp;
                         <span style={{textDecoration: "none", cursor: "pointer", color: "#298af2"}} onClick={() => setSignUP(false)}>
-                          Sign in
+                          S'identifier
                         </span>
                       </p>
                     </div>

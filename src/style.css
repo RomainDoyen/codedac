@@ -14,14 +14,15 @@
     transition: 0.6s;
 }
 
-.main-header ul {
+.main-header ul, #navbarSupportedContent > div > ul {
     display: flex;
-    right: 110px;
+    right: 15px;
     position: absolute;
 }
 
 .main-header ul a, .footer-right ul li {
     list-style-type: none;
+    text-decoration: none;
     margin: 10px;
     position: relative;
     nav-left: current;
@@ -38,9 +39,9 @@
     letter-spacing: 1px;
 }
 
-.main-header ul a:hover {
+.main-header ul a:hover li {
     color: #404040;
-    transform: translate(1rem, 0);
+    /* transform: translate(1rem, 0); */
 }
 
 /* Footer */
@@ -48,14 +49,13 @@
 .main-footer {
     display: flex;
     align-items: center;
-    /* justify-items: center; */
     justify-content: space-evenly;
     color: #efe447;
     font-family: 'Space Mono', monospace;
     background: linear-gradient(-70deg,  #000000, #000000);
     border-top: 1px solid #acaa68;
     width: 100%;
-    height: 250px;
+    height: 150px;
 }
 
 .main-footer ul li a {
