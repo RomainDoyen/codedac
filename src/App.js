@@ -14,6 +14,7 @@ import Header from './components/Header';
 import Auth from './pages/Auth';
 import { auth } from './firebase';
 import { signOut } from 'firebase/auth';
+import BackToTopButton from './components/BackToTopButton'
 import Footer from './pages/Footer';
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
       <Route path='/auth' element={<Auth setActive={setActive} setUser={setUser}></Auth>}></Route>
       <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
+     <BackToTopButton></BackToTopButton>
      <Footer></Footer>
     </div>
   );
