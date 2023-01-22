@@ -274,3 +274,39 @@ span {
   font-weight: 700;
   border-radius: 4px;
 }
+
+/* Dropdown */
+
+.dropdown {
+  background-color: #41B993;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.dropdown p {
+  color: #4a645d;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+li.nav-link.logout {
+  cursor: pointer;
+  margin-right: 5px;
+  background-color: #4a645d;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 1s all;
+}
+
+li.nav-link.logout:hover {
+  background-color: #12b688;
+  color: #4a645d;
+}
+
+/* .dropdown p, .dropdown li.nav-link {
+  visibility: hidden;
+} */

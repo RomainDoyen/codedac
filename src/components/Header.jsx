@@ -36,15 +36,15 @@ const Header = ({active, setActive, user, handleLogout}) => {
                 <div className="row g-3">
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     {userId ? (
-                      <>
+                      <div className='dropdown'>
                         <div className="profile-logo">
                           <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="logo" style={{width: "30px", height: "30px", borderRadius: "50%", marginTop: "12px"}}/>
                         </div>
-                        <p style={{marginTop: "12px", marginLeft: "5px"}}>
+                        <p>
                           {user?.displayName}
                         </p>
-                        <li className="account nav-link" onClick={handleLogout}>Déconnexion</li>
-                      </>
+                        <li className="nav-link logout" onClick={handleLogout}>Déconnexion</li>
+                      </div>
                     ) : (
                       <Link to="/auth">
                         <li className={`account nav-link ${active === "login" ? "active" : ""}`} onClick={() => setActive("login")}>Connexion</li>
