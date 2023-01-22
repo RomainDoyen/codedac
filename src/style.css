@@ -7,12 +7,12 @@
     background: linear-gradient(-70deg,  #202020, #0b0b0b);
     border-bottom: 1px solid #9C7BD7;
     padding: 15px;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
 
-.main-header, h1, button, .main-footer {
+/* .main-header, h1, button, .main-footer {
     transition: 0.6s;
-}
+} */
 
 div#navbarSupportedContent {
     display: inline-flex;

@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-@keyframes wiggle {
+/* @keyframes wiggle {
   0%, 7% {
     transform: rotateZ(0);
   }
@@ -42,26 +42,20 @@
   40%, 100% {
     transform: rotateZ(0);
   }
-}
+} */
 
-.account {
-  /* position: absolute; */
+.account.nav-link.active, .nav-item.nav-link.active {
   right: 15px;
   padding: 10px;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   background-color: #12b688;
+  color: #394a45;
   font-size: medium;
   border: none;
   border-radius: 0.5rem;
-  transition: 1s;
+  /* transition: 1s; */
   cursor: pointer;
-  animation: wiggle 2s linear infinite;
-}
-
-.account:hover {
-  background-color: #41B993;
-  color: #59756d;
 }
 
 .glass-1 {
@@ -133,10 +127,10 @@ span {
   color: #41B993;
 }
 
-
 .input-text-box {
   border-radius: 5px;
   background-color: #1b1a1a;
+  color: #12b688;
   font-size: 15px;
   height: 45px;
   width: 100%;
@@ -146,17 +140,14 @@ span {
   border: 2px solid transparent;
 }
 
-.input-text-box:focus {
-  color: #12b688;
-}
-
-.input-text-box:hover {
-  border-color: #41B993;
+.input-text-box:focus-visible {
+  outline: #12b688;
+  transition: 1s all;
 }
 
 .form-control:focus {
   box-shadow: none !important;
-  border-color: #f5bc04 !important;
+  border-color: #12b688;
 }
 
 .btn-sign-in {
@@ -189,6 +180,10 @@ span {
 
 .blog-form input:focus {
   border-color: #f5bc04 !important;
+}
+
+.text-center.heading.py-2, .small.fw-bold.mt-2.pt-1.mb-0 {
+  color: rgb(162, 162, 162);
 }
 
 /* Spinner */
@@ -310,3 +305,13 @@ li.nav-link.logout:hover {
 /* .dropdown p, .dropdown li.nav-link {
   visibility: hidden;
 } */
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error img {
+  width: 100%;
+}
