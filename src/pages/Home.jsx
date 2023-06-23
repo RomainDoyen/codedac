@@ -67,34 +67,34 @@ const Home = ({setActive, user}) => {
 
   return (
     <div className="container-fluid pb-4 pt-4 padding">
-      <div class="flex-content">
-      <div class="content">
-        <p><i class="fa-solid fa-l"></i>orem ipsum dolor sit amet, consectetur adipisicing elit. 
+      <div className="flex-content">
+      <div className="content">
+        <p><i className="fa-solid fa-l"></i>orem ipsum dolor sit amet, consectetur adipisicing elit. 
           Reprehenderit ratione, praesentium distinctio iure animi eius nemo? Blanditiis, debitis. 
           Et eaque nostrum rem odio, explicabo aspernatur! Modi culpa iure magni nobis.
         </p>
       </div>
     </div>
-    <div class="main">
-      <div class="glass-1">
-        <h2><i class="fa-solid fa-chevron-right"></i> Bonjour !</h2>
+    <div className="main">
+      <div className="glass-1">
+        <h2><i className="fa-solid fa-chevron-right"></i> Bonjour !</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
           doloremque et soluta sed impedit maxime, veniam molestias. Dolorem
           qui, quibusdam, debitis magnam, quos itaque voluptas aliquam nulla
           placeat totam officiis. 📟
         </p>
-        <span><i class="fa-solid fa-code"></i></span>
+        <span><i className="fa-solid fa-code"></i></span>
       </div>
-      <div class="glass-2">
-        <h2><i class="fa-solid fa-chevron-right"></i> Hello World !</h2>
+      <div className="glass-2">
+        <h2><i className="fa-solid fa-chevron-right"></i> Hello World !</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-          doloremque et soluta sed <span class="green">impedit</span> maxime,
+          doloremque et soluta sed <span className="green">impedit</span> maxime,
           veniam molestias. Dolorem qui, quibusdam, debitis magnam, quos itaque
-          voluptas aliquam nulla placeat totam officiis. <span class="lien">🔗</span>
+          voluptas aliquam nulla placeat totam officiis. <span className="lien">🔗</span>
         </p>
-        <span><i class="fa-solid fa-code"></i></span>
+        <span><i className="fa-solid fa-code"></i></span>
       </div>
     </div>
       <div className="container padding">

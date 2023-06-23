@@ -22,7 +22,7 @@ function BackToTopButton() {
 
   return (
     <button className={`back-to-top-button ${showButton ? "" : "hidden"}`} onClick={handleClick}>
-      <span><i class="fa-solid fa-chevron-up"></i></span>
+      <span><i className="fa-solid fa-chevron-up"></i></span>
     </button>
   );
 }

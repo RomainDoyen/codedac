@@ -8,7 +8,13 @@ const Trending = ({blogs}) => {
     const options = {
         loop: true,
         margin: 10,
-        nav: true,
+        items: 3,
+        center: true,
+        nav: false,
+        dots:true,
+        autoplay:true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
         responsive: {
             0: {
                 items: 1
@@ -27,9 +33,11 @@ const Trending = ({blogs}) => {
   return (
     <>
       <div>
-        <div className="blog-heading text-start py-2 mb-4">Tendance</div>
+        <div className="blog-heading text-start py-2 mb-4">
+            <p className='blog-heading-title'>Tendance</p>
+        </div>
       </div>
-      <OwlCarousel className='owl-theme' {...options}>
+      <OwlCarousel id="customer-testimonoals" className='owl-carousel owl-theme' {...options}>
         {blogs?.map((item) => (
             <div className="item px-2" key={item.id}>
                 <Link to={`/details/${item.id}`}>

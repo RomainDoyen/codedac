@@ -5,7 +5,9 @@ const MostPopular = ({blogs}) => {
   const navigate = useNavigate();
   return (
     <div>
-      <div className="blog-heading text-start pt-3 py-2 mb-4">Le plus populaire</div>
+      <div className="blog-heading text-start pt-3 py-2 mb-4">
+        <p className='blog-heading-title'>Le plus populaire</p>
+      </div>
       {blogs?.map((item) => (
         <div className="row pb-3" key={item.id} style={{cursor: "pointer"}} onClick={() => navigate(`/details/${item.id}`)}>
             <div className="col-5 align-self-center">
