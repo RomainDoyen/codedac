@@ -6,15 +6,24 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const Trending = ({blogs}) => {
     const options = {
+        // loop: true,
+        // margin: 10,
+        // items: 3,
+        // center: true,
+        // nav: false,
+        // dots:true,
+        // autoplay:true,
+        // autoplayTimeout: 8500,
+        // smartSpeed: 450,
         loop: true,
-        margin: 10,
-        items: 3,
         center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        dots: true,
+        autoplayTimeout: 4500,
+        smartSpeed: 250,
         nav: false,
-        dots:true,
-        autoplay:true,
-        autoplayTimeout: 8500,
-        smartSpeed: 450,
         responsive: {
             0: {
                 items: 1
@@ -34,7 +43,7 @@ const Trending = ({blogs}) => {
     <>
       <div>
         <div className="blog-heading text-start py-2 mb-4">
-            <p className='blog-heading-title'>Tendance</p>
+            <p className='blog-heading-title'><i class="fa-solid fa-chart-simple"></i>&nbsp; Tendance</p>
         </div>
       </div>
       <OwlCarousel id="customer-testimonoals" className='owl-carousel owl-theme' {...options}>
@@ -62,3 +71,4 @@ const Trending = ({blogs}) => {
 }
 
 export default Trending
+

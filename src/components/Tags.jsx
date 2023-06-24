@@ -5,7 +5,7 @@ const Tags = ({tags}) => {
     <div>
       <div>
         <div className='blog-heading text-start py-2 mb-4'>
-          <p className='blog-heading-title'>Tags</p>
+          <p className='blog-heading-title'><i class="fa-solid fa-tag"></i>&nbsp; Tags</p>
         </div>
       </div>
       <div className="tags">

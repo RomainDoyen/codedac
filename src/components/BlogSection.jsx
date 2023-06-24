@@ -9,7 +9,7 @@ const BlogSection = ({blogs, user, handleDelete}) => {
   return (
     <div>
       <div className="blog-heading text-start py-2 mb-4">
-        <p className='blog-heading-title'>Blogs quotidiens</p>
+        <p className='blog-heading-title'><i class="fa-solid fa-square-poll-horizontal"></i>&nbsp; Blogs quotidiens</p>
       </div>
       {blogs?.map((item) => (
         <div className="row pb-4" key={item.id}>
@@ -38,9 +38,9 @@ const BlogSection = ({blogs, user, handleDelete}) => {
                 </Link>
                 {userId && item.userId === userId && (
                     <div style={{float: "right"}}>
-                        <FontAwesome name='trash' style={{margin: "15px", cursor: "pointer"}} size="2x" onClick={() => handleDelete(item.id)}></FontAwesome>
+                        <FontAwesome name='trash' style={{margin: "15px", cursor: "pointer"}} size="1.7x" onClick={() => handleDelete(item.id)}></FontAwesome>
                         <Link to={`/update/${item.id}`}>
-                            <FontAwesome name='edit' style={{cursor: "pointer"}} size="2x"></FontAwesome>
+                            <FontAwesome name='edit' style={{cursor: "pointer"}} size="1.7x"></FontAwesome>
                         </Link>
                     </div>
                 )}

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="footer-left">
         <h2 id="h1"><span className="flow">📨</span> Blog CodeDAC</h2>
       </div>
-      <p>2022 - Tous droits réservés</p>
+      <p>{new Date().getFullYear()} - Tous droits réservés</p>
       <div className="footer-right">
         <ul>
           <li><a href="https://www.facebook.com/"><i className="fa-brands fa-facebook-f"></i></a></li>

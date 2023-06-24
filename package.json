@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@pathofdev/react-tag-input": "^1.0.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -16,7 +17,8 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.1",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "swiffy-slider": "^1.6.0"
   },
   "scripts": {
     "start": "react-scripts start",

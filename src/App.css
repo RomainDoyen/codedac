@@ -47,7 +47,8 @@
   }
 } */
 
-.account.nav-link.active, .nav-item.nav-link.active {
+.account.nav-link.active, 
+.nav-item.nav-link.active {
   right: 15px;
   padding: 10px;
   font-family: 'Poppins', sans-serif;
@@ -142,9 +143,24 @@ span {
   height: 45px;
   width: 100%;
   letter-spacing: 1px;
-  margin: 6px;
-  padding: 5px;
+  margin: 13px;
+  padding: 9px;
   border: 2px solid transparent;
+}
+
+input[type="radio"].form-check-input {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.mb-3 {
+  /* border: ; */
+  border: 2px solid #276050;
+  border-radius: 8px;
+  padding-right: 26px;
+  margin-bottom: 15px;
 }
 
 .input-text-box:focus-visible, 
@@ -340,7 +356,17 @@ li.nav-link.logout:hover {
   width: 100%;
 }
 
+.btn.btn-link {
+  color: #4287f5;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 25px;
+}
 
+.btn.btn-link:hover {
+  color: #376abb;
+}
 
 #customer-testimonoals .item {
   text-align: center;
@@ -416,4 +442,51 @@ li.nav-link.logout:hover {
 .description-box {
   width: 519px;
   height: 165px;
+}
+
+
+#customer-testimonoals .item {
+  text-align: center;
+  /* padding: 50px; */
+  margin-bottom: 0px;
+  opacity: 0.2;
+  transform: scale3d(0.8, 0.8, 1);
+  transition: all 0.3s ease-in-out;
+}
+#customer-testimonoals .owl-item.active.center .item {
+  opacity: 1;
+  transform: scale3d(1.0, 1.0, 1);
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #56423D;
+  transform: translate3d(0px, -50%, 0px) scale(0.8);
+}
+.owl-carousel .owl-dots {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.owl-carousel .owl-dots .owl-dot{ 
+  display: inline-block;
+}
+.owl-carousel .owl-dots .owl-dot span{ 
+  /* background: #eaa400; */
+  background: #56423D;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 2px 5px;
+  transform: translate3d(0px, -50%, 0px) scale(0.3);
+  transform-origin: 50% 50% 0;
+  transition: all 250ms ease-out 0s;
+}
+
+/* Blog title */
+
+.blog-title-box {
+  background-repeat: no-repeat;
+}
+
+.blog-title {
+  width: 100%;
 }
