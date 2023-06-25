@@ -1,3 +1,6 @@
+@import url('header.css');
+@import url('footer.css');
+
 * {
   box-sizing: border-box;
   margin: 0; 

@@ -124,7 +124,7 @@
 span {
   color: #9C7BD7;
   margin-top: 15px;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .green {
@@ -290,16 +290,63 @@ input[type="radio"].form-check-input {
 }
 
 .row.pb-4 {
+  margin-top: 10px;
+  padding: 18px;
+  background-color: #3d3939;
+  transition: 0.6s all ease-in-out;
+}
+
+.row.pb-4:hover {
+  background-color: #2e2a2a;
+}
+
+span.title.py-2 {
+  font-weight: 500;
+}
+
+.title.py-2, .author {
+  margin-left: 15px;
+}
+
+span.meta-info {
   display: flex;
-  margin-top: 30px;
-  background-color: #202020;
-  justify-content: space-evenly;
+  margin-bottom: 15px;
+  font-size: larger;
+  font-style: italic;
+  color: #5e7ba9;
+}
+
+.blogs-img img {
+  border-radius: 5px;
+  position: sticky;
+  right: 13px;
+  width: 50%;
+}
+
+.short-description.text-start {
+  color: #979797;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.btn.btn-read {
+  border: none;
+  background: none;
+  color: #41B993;
+  font-size: medium;
+  cursor: pointer;
+  transition: 1s all;
+  margin-top: 15px;
+}
+
+.btn.btn-read:hover {
+  color: #59756d;
 }
 
 .category {
   display: inline-block;
   position: relative;
-  background-color: #4287f5;
+  background-color: #eaa400;
   padding: 4px 8px;
   color: #fff;
   text-decoration: none;
@@ -308,6 +355,10 @@ input[type="radio"].form-check-input {
   line-height: 16px;
   font-weight: 700;
   border-radius: 4px;
+}
+
+h6.category.catg-color {
+  color: #202020;
 }
 
 /* Dropdown */
@@ -489,4 +540,21 @@ li.nav-link.logout:hover {
 
 .blog-title {
   width: 100%;
+}
+
+/* Blog content */
+
+.container .col-md-3 {
+  float: right;
+  width: 40%;
+  position: relative;
+  top: -1200px;
+}
+
+.container .col-md-8 {
+  width: 60%;
+}
+
+.col-md-3 {
+  flex-grow: 4;
 }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const Header = ({active, setActive, user, handleLogout}) => {
   const userId = user?.uid;
   return (
+    <header>
     <div class="main-header" id="main-header">
       <h1>⌨️ Blog CodeDAC</h1>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -58,7 +59,8 @@ const Header = ({active, setActive, user, handleLogout}) => {
         </div>
       </nav>
     </div>
+  </header>
   )
 }
 
-export default Header
+export default Header;

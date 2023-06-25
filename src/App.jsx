@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import './App.css';
-import "./style.css";
-import "./media-queries.css";
+import './styles/App.css';
+// import "./styles/style.css";
+import "./styles/media-queries.css";
 import Home from './pages/Home';
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'

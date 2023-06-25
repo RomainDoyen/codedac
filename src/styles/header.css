@@ -1,5 +1,3 @@
-/* Header */
-
 .main-header {
     display: flex;
     color: #9C7BD7;
@@ -44,42 +42,4 @@ div#navbarSupportedContent {
 .main-header ul a:hover li {
     color: #404040;
     /* transform: translate(1rem, 0); */
-}
-
-/* Footer */
-
-.main-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    color: #efe447;
-    font-family: 'Space Mono', monospace;
-    background: linear-gradient(-70deg,  #000000, #000000);
-    border-top: 1px solid #acaa68;
-    width: 100%;
-    height: 150px;
-}
-
-.main-footer ul li a {
-    font-size: larger;
-}
-
-.footer-right ul {
-    display: flex;
-}
-
-.fa-discord, .fa-facebook-f, .fa-twitter {
-    color: #404040;
-}
-
-.fa-facebook-f:hover {
-    color: #4867AA;
-}
-
-.fa-twitter:hover {
-    color: #1DA1F3;
-}
-
-.fa-discord:hover {
-    color: #5562EA;
 }
